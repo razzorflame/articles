@@ -43,7 +43,9 @@ public:
 	*/
 	static sf::Texture* Get(const std::string &textureName);
 
-
+	/*	Sprawdza czy tekstura zosta³a wczeœniej wczytana.
+	*/
+	inline static bool Exists(const std::string &textureName) { return CTextureManager::Get(textureName) != nullptr; }
 private:
 	/*	Konstruktor menedzera tekstur.
 		Jest prywatny ze wzglêdu na to, ¿e ca³a klasa jest singletonem.
