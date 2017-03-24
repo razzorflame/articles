@@ -2,11 +2,9 @@
 
 int main()
 {
-	auto game = new CGame();
+	auto &game = CGame::Instance();
 
-	game->Run();
-
-	delete game;
+	game.Run();
 
 	return 0;
 }
